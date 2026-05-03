@@ -41,3 +41,18 @@ JOIN users         u ON b.user_id        = u.user_id
 JOIN tour_packages p ON b.package_id     = p.package_id
 JOIN destinations  d ON p.destination_id = d.destination_id;
 
+
+INSERT INTO admin_activity_log (admin_id, action, target_table, target_id, details)
+VALUES
+(1, 'CREATE', 'destinations', 1, 'Added new destination Cox''s Bazar'),
+(1, 'UPDATE', 'travel_packages', 2, 'Updated price for Sundarbans package'),
+(1, 'DELETE', 'hotels', 3, 'Removed inactive hotel record'),
+(1, 'CREATE', 'users', 5, 'Created new staff account'),
+(1, 'UPDATE', 'bookings', 4, 'Changed booking status to confirmed'),
+(1, 'DELETE', 'reviews', 6, 'Deleted inappropriate review'),
+(1, 'CREATE', 'transportation', 2, 'Added new flight schedule Dhaka to Cox''s Bazar'),
+(1, 'UPDATE', 'hotels', 1, 'Updated hotel price and amenities'),
+(1, 'CREATE', 'travel_packages', 7, 'Added Kuakata special tour package'),
+(1, 'UPDATE', 'users', 3, 'Verified user email manually');
+
+
