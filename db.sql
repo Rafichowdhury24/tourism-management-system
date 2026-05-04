@@ -18,14 +18,12 @@ CREATE TABLE admin_activity_log (
 CREATE VIEW admin_dashboard_view AS
 SELECT
   b.booking_id,
-  b.booked_at,
-  b.travel_date,
-  b.num_travelers,
-  b.total_price,
+  b.created_at,
+  b.total_amount,
   b.status          AS booking_status,
   b.special_request,
   u.user_id,
-  u.name            AS tourist_name,
+  u.full_name            AS tourist_name,
   u.email           AS tourist_email,
   u.phone           AS tourist_phone,
   p.package_id,
@@ -38,7 +36,7 @@ SELECT
   d.country
 FROM bookings b
 JOIN users         u ON b.user_id        = u.user_id
-JOIN tour_packages p ON b.package_id     = p.package_id
+JOIN travel_packages p ON b.package_id     = p.package_id
 JOIN destinations  d ON p.destination_id = d.destination_id;
 
 
