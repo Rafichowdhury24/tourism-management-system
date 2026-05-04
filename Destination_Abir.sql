@@ -11,3 +11,9 @@ CREATE TABLE users (
     created_at    DATETIME            NOT NULL DEFAULT CURRENT_TIMESTAMP,
     updated_at    DATETIME            NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
+
+INSERT INTO destinations (name, country, city, description, best_season) VALUES
+('Cox''s Bazar',     'Bangladesh', 'Cox''s Bazar', 'World''s longest natural sea beach.',          'October - March'),
+('Sundarbans',       'Bangladesh', 'Khulna',       'Largest mangrove forest, home of Royal Bengal Tiger.', 'November - February'),
+('Sajek Valley',     'Bangladesh', 'Rangamati',    'Beautiful hill track valley with scenic views.', 'October - April'),
+('Kuakata',          'Bangladesh', 'Patuakhali',   'Panoramic sea beach; see both sunrise and sunset.', 'November - March');
