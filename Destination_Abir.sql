@@ -1,15 +1,14 @@
-CREATE TABLE users (
-    user_id       INT AUTO_INCREMENT PRIMARY KEY,
-    full_name     VARCHAR(100)        NOT NULL,
-    email         VARCHAR(150)        NOT NULL UNIQUE,
-    password_hash VARCHAR(255)        NOT NULL,
-    phone         VARCHAR(20),
-    address       TEXT,
-    profile_pic   VARCHAR(255),
-    role          ENUM('tourist','admin','staff') NOT NULL DEFAULT 'tourist',
-    is_verified   TINYINT(1)          NOT NULL DEFAULT 0,
-    created_at    DATETIME            NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    updated_at    DATETIME            NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+CREATE TABLE destinations (
+    destination_id   INT AUTO_INCREMENT PRIMARY KEY,
+    name             VARCHAR(150)  NOT NULL,
+    country          VARCHAR(100)  NOT NULL,
+    city             VARCHAR(100),
+    description      TEXT,
+    image_url        VARCHAR(255),
+    best_season      VARCHAR(100),
+    avg_rating       DECIMAL(3,2)  DEFAULT 0.00,
+    is_active        TINYINT(1)    NOT NULL DEFAULT 1,
+    created_at       DATETIME      NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
 INSERT INTO destinations (name, country, city, description, best_season) VALUES
