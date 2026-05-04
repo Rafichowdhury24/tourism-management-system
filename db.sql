@@ -13,7 +13,7 @@ CREATE TABLE admin_activity_log (
   PRIMARY KEY (log_id),
   CONSTRAINT fk_log_admin FOREIGN KEY (admin_id)
     REFERENCES users (user_id) ON DELETE CASCADE
-)
+);
 
 CREATE VIEW admin_dashboard_view AS
 SELECT
