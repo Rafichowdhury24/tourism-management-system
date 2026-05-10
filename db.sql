@@ -40,6 +40,22 @@ JOIN travel_packages p ON b.package_id     = p.package_id
 JOIN destinations  d ON p.destination_id = d.destination_id;
 
 
+CREATE TABLE reviews (
+    review_id       INT AUTO_INCREMENT PRIMARY KEY,
+    user_id         INT            NOT NULL,
+    destination_id  INT,
+    package_id      INT,
+    hotel_id        INT,
+    rating          TINYINT        NOT NULL CHECK (rating BETWEEN 1 AND 5),
+    comment         TEXT,
+    created_at      DATETIME       NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT fk_rev_user    FOREIGN KEY (user_id)       REFERENCES users(user_id)              ON DELETE CASCADE,
+    CONSTRAINT fk_rev_dest    FOREIGN KEY (destination_id) REFERENCES destinations(destination_id) ON DELETE SET NULL,
+    CONSTRAINT fk_rev_pkg     FOREIGN KEY (package_id)    REFERENCES travel_packages(package_id) ON DELETE SET NULL,
+    CONSTRAINT fk_rev_hotel   FOREIGN KEY (hotel_id)      REFERENCES hotels(hotel_id)            ON DELETE SET NULL
+);
+
+
 INSERT INTO admin_activity_log (admin_id, action, target_table, target_id, details)
 VALUES
 (1, 'CREATE', 'destinations', 1, 'Added new destination Cox''s Bazar'),
