@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tour Packages — Bhromon.bd</title>
+  
+  <link rel="stylesheet" href="packages.css"/>
+</head>
+<body data-hero="true">
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb"><a href="index.html">Home</a> / Tour Packages</div>
+        <h1 class="display-2">Tour Packages</h1>
+        <p>Choose from our handpicked selection of fully-guided tour packages across Bangladesh.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="pkg-layout">
+
+          <!-- ── SIDEBAR ── -->
+          <aside class="sidebar">
+            <h3>🔎 Filter Packages</h3>
+
+            <div class="filter-section">
+              <h4>Destination</h4>
+              <label class="filter-check"><input type="checkbox" value="coxs-bazar" onchange="applyFilters()"> <span>Cox's Bazar</span></label>
+              <label class="filter-check"><input type="checkbox" value="sundarbans"  onchange="applyFilters()"> <span>Sundarbans</span></label>
+              <label class="filter-check"><input type="checkbox" value="sajek"       onchange="applyFilters()"> <span>Sajek Valley</span></label>
+              <label class="filter-check"><input type="checkbox" value="bandarban"   onchange="applyFilters()"> <span>Bandarban</span></label>
+              <label class="filter-check"><input type="checkbox" value="sylhet"      onchange="applyFilters()"> <span>Sylhet</span></label>
+            </div>
+
+            <div class="filter-section">
+              <h4>Duration</h4>
+              <label class="filter-check"><input type="checkbox" value="2" onchange="applyFilters()"> <span>2 Days</span></label>
+              <label class="filter-check"><input type="checkbox" value="3" onchange="applyFilters()"> <span>3 Days</span></label>
+              <label class="filter-check"><input type="checkbox" value="4" onchange="applyFilters()"> <span>4 Days</span></label>
+              <label class="filter-check"><input type="checkbox" value="5" onchange="applyFilters()"> <span>5+ Days</span></label>
+            </div>
+
+            <div class="filter-section">
+              <h4>Price Range (BDT)</h4>
+              <div class="price-range">
+                <input class="price-input" type="number" id="minPrice" placeholder="Min" oninput="applyFilters()">
+                <input class="price-input" type="number" id="maxPrice" placeholder="Max" oninput="applyFilters()">
+              </div>
+            </div>
+
+            <div class="filter-section">
+              <h4>Status</h4>
+              <label class="filter-check"><input type="checkbox" value="active"   onchange="applyFilters()"> <span>Available</span></label>
+              <label class="filter-check"><input type="checkbox" value="sold_out" onchange="applyFilters()"> <span>Sold Out</span></label>
+            </div>
+
+            <button class="sidebar-reset" onclick="resetFilters()">Reset All Filters</button>
+          </aside>
+
+          <!-- ── PACKAGES ── -->
+          <div>
+            <div class="pkg-toolbar">
+              <p class="pkg-count">Showing <strong id="pkgCount">4</strong> packages</p>
+              <select class="sort-select" id="sortSelect" onchange="applyFilters()">
+                <option value="default">Sort: Default</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="duration-asc">Duration: Shortest</option>
+                <option value="duration-desc">Duration: Longest</option>
+              </select>
+            </div>
+
+            <div class="pkg-grid" id="pkgGrid">
+
+              <div class="pkg-card" data-dest="coxs-bazar" data-duration="3" data-price="4500" data-status="active">
+                <div class="pkg-card-img-wrap">
+                  <img class="pkg-card-img" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80" alt="Cox's Bazar" loading="lazy">
+                  <span class="badge badge-terra" style="position:absolute;top:14px;left:14px;">3 Days</span>
+                  <span class="badge badge-gold" style="position:absolute;top:14px;right:14px;">Popular</span>
+                </div>
+                <div class="pkg-card-body">
+                  <div class="pkg-meta">
+                    <span>📍 Cox's Bazar</span>
+                    <span>⏱ 3 Days</span>
+                    <span>👥 Up to 20</span>
+                  </div>
+                  <h3>Cox's Bazar Beach Package</h3>
+                  <p>Enjoy the world's longest sea beach with comfortable hotel stay, guided beach walks, and fresh seafood experiences.</p>
+                  <div class="pkg-inclusions">
+                    <span class="pkg-tag">🏨 Hotel</span>
+                    <span class="pkg-tag">🍳 Breakfast</span>
+                    <span class="pkg-tag">🚌 Transport</span>
+                    <span class="pkg-tag">🧭 Guide</span>
+                  </div>
+                  <div class="pkg-footer">
+                    <div class="pkg-price">৳4,500 <small>/ person</small></div>
+                    <button class="btn btn-primary" onclick="openModal('Cox\'s Bazar Beach Package','4500','https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=200&q=60','Cox\'s Bazar · 3 Days')">Book Now</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pkg-card" data-dest="sundarbans" data-duration="4" data-price="6500" data-status="active">
+                <div class="pkg-card-img-wrap">
+                  <img class="pkg-card-img" src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&q=80" alt="Sundarbans" loading="lazy">
+                  <span class="badge badge-teal" style="position:absolute;top:14px;left:14px;">4 Days</span>
+                </div>
+                <div class="pkg-card-body">
+                  <div class="pkg-meta">
+                    <span>📍 Sundarbans</span>
+                    <span>⏱ 4 Days</span>
+                    <span>👥 Up to 15</span>
+                  </div>
+                  <h3>Sundarban Wildlife Tour</h3>
+                  <p>Deep dive into the world's largest mangrove forest. Spot Royal Bengal Tigers, crocodiles, and rare bird species.</p>
+                  <div class="pkg-inclusions">
+                    <span class="pkg-tag">⛵ Boat</span>
+                    <span class="pkg-tag">🏨 Hotel</span>
+                    <span class="pkg-tag">🍽️ All Meals</span>
+                    <span class="pkg-tag">🧭 Guide</span>
+                  </div>
+                  <div class="pkg-footer">
+                    <div class="pkg-price">৳6,500 <small>/ person</small></div>
+                    <button class="btn btn-primary" onclick="openModal('Sundarban Wildlife Tour','6500','https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=200&q=60','Sundarbans · 4 Days')">Book Now</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pkg-card" data-dest="sajek" data-duration="3" data-price="5000" data-status="active">
+                <div class="pkg-card-img-wrap">
+                  <img class="pkg-card-img" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=80" alt="Sajek" loading="lazy">
+                  <span class="badge badge-terra" style="position:absolute;top:14px;left:14px;">3 Days</span>
+                </div>
+                <div class="pkg-card-body">
+                  <div class="pkg-meta">
+                    <span>📍 Sajek Valley</span>
+                    <span>⏱ 3 Days</span>
+                    <span>👥 Up to 12</span>
+                  </div>
+                  <h3>Sajek Valley Explorer</h3>
+                  <p>Wake up above the clouds in the magical Sajek Valley. Trek scenic trails and experience the indigenous culture of CHT.</p>
+                  <div class="pkg-inclusions">
+                    <span class="pkg-tag">🏡 Resort</span>
+                    <span class="pkg-tag">🍽️ Meals</span>
+                    <span class="pkg-tag">🧭 Local Guide</span>
+                  </div>
+                  <div class="pkg-footer">
+                    <div class="pkg-price">৳5,000 <small>/ person</small></div>
+                    <button class="btn btn-primary" onclick="openModal('Sajek Valley Explorer','5000','https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=200&q=60','Sajek Valley · 3 Days')">Book Now</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pkg-card" data-dest="bandarban" data-duration="4" data-price="5500" data-status="active">
+                <div class="pkg-card-img-wrap">
+                  <img class="pkg-card-img" src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=600&q=80" alt="Bandarban" loading="lazy">
+                  <span class="badge badge-terra" style="position:absolute;top:14px;left:14px;">4 Days</span>
+                </div>
+                <div class="pkg-card-body">
+                  <div class="pkg-meta">
+                    <span>📍 Bandarban</span>
+                    <span>⏱ 4 Days</span>
+                    <span>👥 Up to 10</span>
+                  </div>
+                  <h3>Bandarban Adventure Trip</h3>
+                  <p>Trek to Keokradong peak, swim in Remakri falls, and experience the rich tribal hospitality of Bandarban's highlands.</p>
+                  <div class="pkg-inclusions">
+                    <span class="pkg-tag">🏨 Accommodation</span>
+                    <span class="pkg-tag">🥾 Trekking Guide</span>
+                    <span class="pkg-tag">🚌 Transport</span>
+                  </div>
+                  <div class="pkg-footer">
+                    <div class="pkg-price">৳5,500 <small>/ person</small></div>
+                    <button class="btn btn-primary" onclick="openModal('Bandarban Adventure Trip','5500','https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=200&q=60','Bandarban · 4 Days')">Book Now</button>
+                  </div>
+                </div>
+              </div>
+
+            </div><!-- /pkg-grid -->
+
+            <div class="empty-state" id="noResults" style="display:none;">
+              <span>🔍</span>
+              <p>No packages match your filters. Try adjusting them.</p>
+              <button class="btn btn-outline" style="margin-top:16px;" onclick="resetFilters()">Clear Filters</button>
+            </div>
+          </div><!-- /packages -->
+
+        </div><!-- /pkg-layout -->
+      </div>
+    </section>
+  </main>
+
+  <!-- ══ BOOKING MODAL ═ -->
+  <div class="modal-overlay" id="modalOverlay" onclick="closeModalOutside(event)">
+    <div class="modal">
+      <div class="modal-header">
+        <h2>Book Your Trip</h2>
+        <button class="modal-close" onclick="closeModal()">✕</button>
+      </div>
+      <div class="modal-pkg-info" id="modalPkgInfo">
+        <img id="modalImg" src="" alt="">
+        <div>
+          <h4 id="modalTitle"></h4>
+          <span id="modalMeta"></span>
+        </div>
+      </div>
+      <form onsubmit="submitBooking(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Full Name</label>
+            <input class="form-control" type="text" placeholder="Your full name" required>
+          </div>
+          <div class="form-group">
+            <label>Phone</label>
+            <input class="form-control" type="tel" placeholder="01XXXXXXXXX" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input class="form-control" type="email" placeholder="you@example.com" required>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Travel Date</label>
+            <input class="form-control" type="date" id="travelDate" required onchange="updateTotal()">
+          </div>
+          <div class="form-group">
+            <label>No. of Travelers</label>
+            <input class="form-control" type="number" id="numTravelers" min="1" max="20" value="1" required oninput="updateTotal()">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Special Requests <span style="color:var(--muted);font-weight:400;">(optional)</span></label>
+          <textarea class="form-control" placeholder="Any special requirements…"></textarea>
+        </div>
+        <div class="modal-total">
+          <span>Total Price</span>
+          <strong id="modalTotal">৳0</strong>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:14px;">Confirm Booking</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/components.js"></script>
+  <script>
+    let currentPrice = 0;
+
+    function openModal(title, price, img, meta) {
+      currentPrice = parseInt(price);
+      document.getElementById('modalTitle').textContent = title;
+      document.getElementById('modalMeta').textContent  = meta;
+      document.getElementById('modalImg').src           = img;
+      document.getElementById('numTravelers').value     = 1;
+      updateTotal();
+      // Set min date to today
+      document.getElementById('travelDate').min = new Date().toISOString().split('T')[0];
+      document.getElementById('modalOverlay').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      document.getElementById('modalOverlay').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function closeModalOutside(e) {
+      if (e.target === document.getElementById('modalOverlay')) closeModal();
+    }
+
+    function updateTotal() {
+      const n = parseInt(document.getElementById('numTravelers').value) || 1;
+      document.getElementById('modalTotal').textContent = '৳' + (currentPrice * n).toLocaleString('en-BD');
+    }
+
+    function submitBooking(e) {
+      e.preventDefault();
+      closeModal();
+      window.showToast('Booking submitted! We will confirm shortly.', 'success');
+    }
+
+    // ── Filtering ──
+    function applyFilters() {
+      const destChecked   = [...document.querySelectorAll('input[type=checkbox][value*="-"], input[type=checkbox][value="sundarbans"], input[type=checkbox][value="sajek"], input[type=checkbox][value="bandarban"], input[type=checkbox][value="sylhet"]')]
+        .filter(c => c.checked).map(c => c.value);
+      const durChecked    = [...document.querySelectorAll('input[type=checkbox][value="2"], input[type=checkbox][value="3"], input[type=checkbox][value="4"], input[type=checkbox][value="5"]')]
+        .filter(c => c.checked).map(c => parseInt(c.value));
+      const statusChecked = [...document.querySelectorAll('input[type=checkbox][value="active"], input[type=checkbox][value="sold_out"]')]
+        .filter(c => c.checked).map(c => c.value);
+      const minP = parseInt(document.getElementById('minPrice').value) || 0;
+      const maxP = parseInt(document.getElementById('maxPrice').value) || Infinity;
+      const sort = document.getElementById('sortSelect').value;
+
+      let cards = [...document.querySelectorAll('.pkg-card')];
+
+      cards.forEach(card => {
+        const dest   = card.dataset.dest;
+        const dur    = parseInt(card.dataset.duration);
+        const price  = parseInt(card.dataset.price);
+        const status = card.dataset.status;
+
+        const matchDest   = destChecked.length   === 0 || destChecked.includes(dest);
+        const matchDur    = durChecked.length     === 0 || durChecked.includes(dur >= 5 ? 5 : dur);
+        const matchStatus = statusChecked.length  === 0 || statusChecked.includes(status);
+        const matchPrice  = price >= minP && price <= maxP;
+
+        card.style.display = (matchDest && matchDur && matchStatus && matchPrice) ? '' : 'none';
+      });
+
+      // Sort visible cards
+      const grid = document.getElementById('pkgGrid');
+      const visible = cards.filter(c => c.style.display !== 'none');
+      visible.sort((a, b) => {
+        if (sort === 'price-asc')  return a.dataset.price    - b.dataset.price;
+        if (sort === 'price-desc') return b.dataset.price    - a.dataset.price;
+        if (sort === 'duration-asc')  return a.dataset.duration - b.dataset.duration;
+        if (sort === 'duration-desc') return b.dataset.duration - a.dataset.duration;
+        return 0;
+      });
+      visible.forEach(c => grid.appendChild(c));
+
+      const count = visible.length;
+      document.getElementById('pkgCount').textContent = count;
+      document.getElementById('noResults').style.display = count === 0 ? 'block' : 'none';
+    }
+
+    function resetFilters() {
+      document.querySelectorAll('input[type=checkbox]').forEach(c => c.checked = false);
+      document.getElementById('minPrice').value = '';
+      document.getElementById('maxPrice').value = '';
+      document.getElementById('sortSelect').value = 'default';
+      applyFilters();
+    }
+
+    // Pre-filter from URL param (e.g. from destinations page)
+    const urlDest = new URLSearchParams(location.search).get('dest');
+    if (urlDest) {
+      const cb = document.querySelector(`input[value="${urlDest}"]`);
+      if (cb) { cb.checked = true; applyFilters(); }
+    }
+    const urlSearch = new URLSearchParams(location.search).get('search');
+    if (urlSearch) {
+      // Highlight matching
+      document.querySelectorAll('.pkg-card h3').forEach(h => {
+        if (!h.textContent.toLowerCase().includes(urlSearch.toLowerCase())) {
+          h.closest('.pkg-card').style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

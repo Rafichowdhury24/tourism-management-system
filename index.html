@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bhromon.bd — Explore Bangladesh</title>
+  <link rel="stylesheet" href="index.css" />
+  </head>
+<body data-hero="true">
+
+  <main>
+
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="container hero-content">
+        <div class="hero-eyebrow anim-fade-up">Discover Bangladesh</div>
+        <h1 class="anim-fade-up delay-1">
+          Travel <em>Beyond</em><br>The Ordinary
+        </h1>
+        <p class="anim-fade-up delay-2">
+          From the world's longest sea beach to misty hill valleys — explore handcrafted tour packages across Bangladesh's most stunning destinations.
+        </p>
+        <div class="hero-cta anim-fade-up delay-3">
+          <a href="packages.html" class="btn btn-primary">Browse Packages</a>
+          <a href="destinations.html" class="btn btn-outline" style="border-color:rgba(255,255,255,.6);color:#fff;">Explore Destinations</a>
+        </div>
+        <div class="hero-search anim-fade-up delay-4">
+          <div class="search-bar">
+            <svg width="18" height="18" fill="none" stroke="var(--muted)" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+            <input type="text" placeholder="Search destinations, packages…" id="heroSearch" />
+            <button class="btn btn-primary" style="border-radius:40px;" onclick="handleSearch()">Search</button>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-hint">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        scroll
+      </div>
+    </section>
+
+    <!-- ══ STATS ══ -->
+    <div class="stats-strip">
+      <div class="container">
+        <div class="stat-item"><div class="num">64+</div><div class="lbl">Destinations</div></div>
+        <div class="stat-item"><div class="num">120+</div><div class="lbl">Tour Packages</div></div>
+        <div class="stat-item"><div class="num">8,400+</div><div class="lbl">Happy Travelers</div></div>
+        <div class="stat-item"><div class="num">4.9★</div><div class="lbl">Average Rating</div></div>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header text-center" style="margin-inline:auto;max-width:560px;">
+          <span class="eyebrow">Why Bhromon.bd</span>
+          <h2>Everything you need for a perfect trip</h2>
+          <p>We handle the details so you can focus on the memories.</p>
+        </div>
+        <div class="why-grid">
+          <div class="why-card anim-fade-up">
+            <div class="why-icon" style="background:rgba(196,98,45,.1);">🗺️</div>
+            <h3>Expert Local Guides</h3>
+            <p>Our curated packages come with knowledgeable local guides who know every hidden gem.</p>
+          </div>
+          <div class="why-card anim-fade-up delay-1">
+            <div class="why-icon" style="background:rgba(42,124,111,.1);">💸</div>
+            <h3>Best Price Guarantee</h3>
+            <p>We match any lower price you find. Transparent pricing, zero hidden fees.</p>
+          </div>
+          <div class="why-card anim-fade-up delay-2">
+            <div class="why-icon" style="background:rgba(212,165,58,.1);">🔒</div>
+            <h3>Secure Booking</h3>
+            <p>Your bookings and payments are protected with industry-standard SSL encryption.</p>
+          </div>
+          <div class="why-card anim-fade-up delay-3">
+            <div class="why-icon" style="background:rgba(196,98,45,.1);">📞</div>
+            <h3>24/7 Support</h3>
+            <p>Our travel experts are available around the clock to assist you before, during, and after your trip.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0;">
+      <div class="container">
+        <div class="section-header flex justify-between items-center">
+          <div>
+            <span class="eyebrow">Top Picks</span>
+            <h2>Featured Destinations</h2>
+          </div>
+          <a href="destinations.html" class="btn btn-ghost">View All →</a>
+        </div>
+        <div class="dest-featured">
+          <div class="dest-card">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80" alt="Cox's Bazar" loading="lazy">
+            <div class="dest-card-overlay">
+              <span class="badge badge-gold" style="width:fit-content;margin-bottom:10px;">Most Popular</span>
+              <h3>Cox's Bazar</h3>
+              <span>📍 Chittagong Division</span>
+            </div>
+          </div>
+          <div class="dest-card">
+            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&q=80" alt="Sundarbans" loading="lazy">
+            <div class="dest-card-overlay">
+              <h3>Sundarbans</h3>
+              <span>📍 Khulna Division</span>
+            </div>
+          </div>
+          <div class="dest-card">
+            <img src="https://ecovialife.com/wp-content/uploads/2025/07/1752504096402-1024x502.jpg" alt="Sajek Valley" loading="lazy">
+            <div class="dest-card-overlay">
+              <h3>Sajek Valley</h3>
+              <span>📍 Rangamati, CHT</span>
+            </div>
+          </div>
+          <div class="dest-card">
+            <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=600&q=80" alt="Bandarban" loading="lazy">
+            <div class="dest-card-overlay">
+              <h3>Bandarban</h3>
+              <span>📍 Chittagong Division</span>
+            </div>
+          </div>
+          <div class="dest-card">
+            <img src="https://english.janomot.com/library/2024/07/05/1720178954_7.jpg" alt="Sylhet" loading="lazy">
+            <div class="dest-card-overlay">
+              <h3>Sylhet</h3>
+              <span>📍 Sylhet Division</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background:var(--sand);padding-top:64px;">
+      <div class="container">
+        <div class="section-header flex justify-between items-center">
+          <div>
+            <span class="eyebrow">Handpicked for you</span>
+            <h2>Popular Tour Packages</h2>
+          </div>
+          <a href="packages.html" class="btn btn-ghost">All Packages →</a>
+        </div>
+        <div class="pkg-strip">
+
+          <div class="card">
+            <div class="card-img-wrap">
+              <img class="card-img" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80" alt="Cox's Bazar" loading="lazy">
+              <span class="badge badge-terra" style="position:absolute;top:14px;left:14px;">3 Days</span>
+            </div>
+            <div class="card-body">
+              <div class="card-meta"><span>📍 Cox's Bazar</span></div>
+              <h3 class="card-title" style="margin-top:8px;">Cox's Bazar Beach Package</h3>
+              <p style="font-size:.87rem;color:var(--muted);margin:8px 0 16px;">Hotel · Breakfast · Transport included</p>
+              <div class="flex justify-between items-center">
+                <div class="card-price">৳4,500 <span>/ person</span></div>
+                <a href="packages.html" class="btn btn-teal" style="padding:9px 20px;font-size:.86rem;">Book Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-img-wrap">
+              <img class="card-img" src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&q=80" alt="Sundarbans" loading="lazy">
+              <span class="badge badge-teal" style="position:absolute;top:14px;left:14px;">4 Days</span>
+            </div>
+            <div class="card-body">
+              <div class="card-meta"><span>📍 Sundarbans, Khulna</span></div>
+              <h3 class="card-title" style="margin-top:8px;">Sundarban Wildlife Tour</h3>
+              <p style="font-size:.87rem;color:var(--muted);margin:8px 0 16px;">Boat · Hotel · All Meals · Guide</p>
+              <div class="flex justify-between items-center">
+                <div class="card-price">৳6,500 <span>/ person</span></div>
+                <a href="packages.html" class="btn btn-teal" style="padding:9px 20px;font-size:.86rem;">Book Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-img-wrap">
+              <img class="card-img" src="https://venture-out.s3.us-east-2.amazonaws.com/guide-images/1748598961599-media%3Fkey%3DAIzaSyCkpNVocP1IwgtIz1s4aaTb1GgwMdUtzBw%26maxHeightPx%3D800%26maxWidthPx%3D800" alt="Sajek" loading="lazy">
+              <span class="badge badge-terra" style="position:absolute;top:14px;left:14px;">3 Days</span>
+            </div>
+            <div class="card-body">
+              <div class="card-meta"><span>📍 Sajek Valley</span></div>
+              <h3 class="card-title" style="margin-top:8px;">Sajek Valley Explorer</h3>
+              <p style="font-size:.87rem;color:var(--muted);margin:8px 0 16px;">Resort · Meals · Local Guide</p>
+              <div class="flex justify-between items-center">
+                <div class="card-price">৳5,000 <span>/ person</span></div>
+                <a href="packages.html" class="btn btn-teal" style="padding:9px 20px;font-size:.86rem;">Book Now</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ TESTIMONIALS ══ -->
+    <section class="section testimonial-section">
+      <div class="container">
+        <div class="section-header text-center" style="margin-inline:auto;max-width:520px;">
+          <span class="eyebrow">Traveler Stories</span>
+          <h2>What our travelers say</h2>
+        </div>
+        <div class="testi-grid">
+          <div class="testi-card">
+            <div class="stars">★★★★★</div>
+            <blockquote>"The Cox's Bazar package was incredible — everything was arranged perfectly. The guide was knowledgeable and the hotel was great. Will definitely book again!"</blockquote>
+            <div class="testi-author">
+              <div class="testi-avatar">R</div>
+              <div class="testi-author-info">
+                <strong>Rahim Hossain</strong>
+                <span>Dhaka · Cox's Bazar Trip</span>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card">
+            <div class="stars">★★★★★</div>
+            <blockquote>"Sajek Valley was breathtaking. Bhromon.bd made the whole experience seamless from booking to the last day. Highly recommend the valley explorer package!"</blockquote>
+            <div class="testi-author">
+              <div class="testi-avatar">N</div>
+              <div class="testi-author-info">
+                <strong>Nusrat Jahan</strong>
+                <span>Chittagong · Sajek Trip</span>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card">
+            <div class="stars">★★★★☆</div>
+            <blockquote>"The Sundarban wildlife tour exceeded all my expectations. Seeing the Royal Bengal Tiger in its natural habitat was a once-in-a-lifetime experience!"</blockquote>
+            <div class="testi-author">
+              <div class="testi-avatar">K</div>
+              <div class="testi-author-info">
+                <strong>Karim Uddin</strong>
+                <span>Sylhet · Sundarban Tour</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-sm">
+      <div class="container">
+        <div class="cta-banner">
+          <div>
+            <h2>Ready for your next adventure?</h2>
+            <p>Join thousands of happy travelers who explored Bangladesh with us. Start planning your dream trip today.</p>
+          </div>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;flex-shrink:0;">
+            <a href="packages.html" class="btn btn-white">Explore Packages</a>
+            <a href="contact.html"  class="btn btn-outline" style="border-color:rgba(255,255,255,.5);color:#fff;">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/components.js"></script>
+  <script>
+    function handleSearch() {
+      const q = document.getElementById('heroSearch').value.trim();
+      if (q) window.location.href = `packages.html?search=${encodeURIComponent(q)}`;
+      else window.location.href = 'packages.html';
+    }
+    document.getElementById('heroSearch').addEventListener('keydown', e => {
+      if (e.key === 'Enter') handleSearch();
+    });
+  </script>
+</body>
+</html>
