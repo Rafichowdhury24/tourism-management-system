@@ -1,7 +1,9 @@
 # Tourism Management System
 
 ## Overview
-The Tourism Management System is a database-based web application developed to manage tourism services such as destinations, bookings, hotels, transportation, payments, and tour packages.
+The Tourism Management System is a database-driven web application designed to manage tourism-related operations efficiently. The project focuses on handling tourist destinations, users, bookings, hotels, transportation, tour packages, payments, and administrative activities through a centralized system.
+
+This project was developed as part of the CSE384.9 Database Management System course project.
 
 ---
 ## Useful Links
